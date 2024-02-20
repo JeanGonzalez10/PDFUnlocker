@@ -13,7 +13,7 @@ PDF Unlocker es una herramienta simple desarrollada en Python con interfaz gráf
 
 ### Cómo utilizar
 
-1. Clona el repositorio o descarga el archivo .exe que contiene el ejecutable de la aplicación.
+1. Clona el repositorio o descarga el archivo [PDFUnlocker.rar](https://github.com/JeanGonzalez10/PDFUnlocker/raw/main/PDFUnlocker.rar) que contiene el ejecutable de la aplicación.
 2. Crea una carpeta llamada **"input"** (su nombre debe ser estrictamente igual) en el mismo directorio donde esta el repositorio clonado o el archivo de la aplicación.
 3. En la carpeta **"input"** ingrese la cantidad de archivos PDF a desbloquear (la contraseña de desbloqueo debe debe ser la misma para los archivos PDF).
 4. Ejecuta la aplicación.
