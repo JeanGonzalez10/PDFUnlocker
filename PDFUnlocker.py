@@ -3,6 +3,7 @@ from PyPDF2 import PdfReader, PdfWriter
 import tkinter as tk
 from tkinter import ttk
 import webbrowser
+import sys
 from PIL import ImageTk, Image
 
 class  PDFUnlockerApp:
@@ -30,7 +31,7 @@ class  PDFUnlockerApp:
         self.label_creador = tk.Label(self.bottom_frame, text="Create by: Jean Carlos Gonzalez G.")
         self.label_creador.grid(row=0, column=0, sticky='w')
 
-        image = Image.open("images\github-mark.png")
+        image = Image.open(self.resource_path(r'images\github-mark.png'))
         image = image.resize((35, 35))
 
         self.image = ImageTk.PhotoImage(image)
@@ -92,6 +93,14 @@ class  PDFUnlockerApp:
         current_content = self.console_text.get("1.0", tk.END)
         self.console_text.delete("1.0", tk.END)
         self.console_text.insert(tk.END, current_content + message + "\n")
+
+    def resource_path(self, relative_path: str):
+        try:
+            base_path = sys._MEIPASS
+        except Exception:
+            base_path = os.path.abspath(".")
+
+        return os.path.join(base_path, relative_path)
 
 if __name__ == "__main__":
     root = tk.Tk()
